@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Add Procedure    
+{% endblock %}
+{% block content %}
+    <h1>Add Procedure</h1>
+    <form method="post" class="form">
+        <label for="procedure_name" class="form-label">Procedure Name :
+            <input type="text" name="procedure_name" id="procedure_name" class="form-control" required>
+        </label>
+        <label for="procedure_description" class="form-label">Description :
+            <input type="text" name="procedure_description" id="procedure_description" class="form-control" required>
+        </label>
+        <label for="procedure_time" class="form-label">Time Required :
+            <input type="number" name="procedure_time" id="procedure_time" class="form-control" required>   
+        </label>
+        <label for="procedure_cost" class="form-label">Basic Price :
+            <input type="number" name="procedure_cost" id="procedure_cost" class="form-control" required>
+        </label>
+        <br>
+        <input type="submit" value="save" class="btn btn-success">
+    </form>
+{% endblock %}
+
+{% block style %}
+    <style>
+        form{
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1{
+            margin-top: 64px;
+            text-align: center;
+        }
+    </style>    
+{% endblock %}
